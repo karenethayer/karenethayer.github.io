@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<title>CS101 Final Project</title>
+
+<style>
+    body {
+        background-color: cornflowerblue;
+        align-items: center;
+        text-align: center;
+        font-family:fantasy;
+        background-image: url("https://i.pinimg.com/736x/88/92/0b/88920bc966a776853b849ffc2a5c52b8.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    p {
+        text-align: left;
+    }
+
+
+    table {
+        background-color: burlywood;
+        text-align: center;
+        width: 100%;
+    }
+
+    td {
+        border: 1px solid gray;
+    }
+
+    td.choreName {
+        font-weight: bold;
+        background-color:lightskyblue;
+    }
+
+    th {
+        font-size: x-large;
+        text-decoration: underline;
+        padding: 10px;
+        background-color: lightpink;
+    }
+
+    ol {
+        text-align: left;
+    }
+
+    td.date {
+        font-weight: bold;
+    }
+    h3.todoTitle {
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: left;
+    }
+    ol {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+
+<script>
+
+    function checkIfDone1() {
+        var checkbox1_checked = document.getElementById("MonChore1").checked;
+        var checkbox2_checked = document.getElementById("MonChore2").checked;
+        var checkbox3_checked = document.getElementById("MonChore3").checked;
+       updateTextIfDone(checkbox1_checked, checkbox2_checked, checkbox3_checked, "doneText1");
+    }
+
+    function checkIfDone2() {
+        var checkbox1_checked = document.getElementById("TuesChore1").checked;
+        var checkbox2_checked = document.getElementById("TuesChore2").checked;
+        var checkbox3_checked = document.getElementById("TuesChore3").checked;
+       updateTextIfDone(checkbox1_checked, checkbox2_checked, checkbox3_checked, "doneText2");
+    }
+
+    function checkIfDone3() {
+        var checkbox1_checked = document.getElementById("WedChore1").checked;
+        var checkbox2_checked = document.getElementById("WedChore2").checked;
+        var checkbox3_checked = document.getElementById("WedChore3").checked;
+       updateTextIfDone(checkbox1_checked, checkbox2_checked, checkbox3_checked, "doneText3");
+    }
+
+    function checkIfDone4() {
+        var checkbox1_checked = document.getElementById("ThursChore1").checked;
+        var checkbox2_checked = document.getElementById("ThursChore2").checked;
+        var checkbox3_checked = document.getElementById("ThursChore3").checked;
+       updateTextIfDone(checkbox1_checked, checkbox2_checked, checkbox3_checked, "doneText4");
+    }
+
+    function checkIfDone5() {
+        var checkbox1_checked = document.getElementById("FriChore1").checked;
+        var checkbox2_checked = document.getElementById("FriChore2").checked;
+        var checkbox3_checked = document.getElementById("FriChore3").checked;
+       updateTextIfDone(checkbox1_checked, checkbox2_checked, checkbox3_checked, "doneText5");
+    }
+
+
+    function updateTextIfDone(checkbox1_checked, checkbox2_checked, checkbox3_checked, textToUpdate) {
+        if (checkbox1_checked == true && checkbox2_checked == true && checkbox3_checked == true) {
+            document.getElementById(textToUpdate).innerHTML = "DONE!";
+        } else if (checkbox1_checked == false && checkbox2_checked == false && checkbox3_checked == false) {
+            document.getElementById(textToUpdate).innerHTML = "Not done";
+        } else {
+            document.getElementById(textToUpdate).innerHTML = "Getting Closer!";
+        }
+    }
+    
+</script>
+
+<body>
+    <h1>My Summer</h1>
+
+    <h3 class="todoTitle">Things I want to do this summer:</h3>
+
+    <ol>
+        <li>Go paddle boarding <br>
+                    <img width="400px"
+                        src="https://www.adventurecats.org/wp-content/uploads/2017/05/14352433_1173697546009939_1723918320633299236_o.jpg">
+
+        </li>
+        <li>Hike at <a href="https://www.fcgov.com/naturalareas/finder/bobcat">Bobcat Ridge</a></li>
+        <li>Play Settlers of Catan <br>
+            <img width="200px" src="https://i.pinimg.com/originals/1b/61/6d/1b616ddbc3705b48df08c329bd8100ee.jpg"> 
+            <img width = "400px" src="https://i.pinimg.com/originals/c4/5f/88/c45f88c45a94ab171c35e04aca4c9fea.jpg">
+        </li>
+        <li>Go on a road trip to Utah</li>
+        <li>Go to a water park if it's open. <a href="https://www.waterworldcolorado.com/"> Water World </a></li>
+    </ol>
+
+    <br>
+
+    <table>
+        <th colspan="6">Summer Chore List</th>
+        <tr>
+            <td class="choreName">Chore Name</td>
+            <td class="date">Monday, June 8</td>
+            <td class="date">Tuesday, June 9</td>
+            <td class="date">Wednesday, June 10</td>
+            <td class="date">Thursday, June 11</td>
+            <td class="date">Friday, June 12</td>
+        </tr>
+        <tr>
+            <td class="choreName">Brush Teeth</td>
+            <td>
+                <input type="checkbox" id="MonChore1" onchange="checkIfDone1()">
+            </td>
+            <td>
+                <input type="checkbox" id="TuesChore1" onchange="checkIfDone2()">
+            </td>
+            <td>
+                <input type="checkbox" id="WedChore1" onchange="checkIfDone3()">
+            </td>
+            <td>
+                <input type="checkbox" id="ThursChore1" onchange="checkIfDone4()">
+            </td>
+            <td>
+                <input type="checkbox" id="FriChore1" onchange="checkIfDone5()">
+            </td>
+        </tr>
+        <tr>
+            <td class="choreName">Clean Room</td>
+            <td>
+                <input type="checkbox" id="MonChore2" onchange="checkIfDone1()">
+            </td>
+            <td>
+                <input type="checkbox" id="TuesChore2" onchange="checkIfDone2()">
+            </td>
+            <td>
+                <input type="checkbox" id="WedChore2" onchange="checkIfDone3()">
+            </td>
+            <td>
+                <input type="checkbox" id="ThursChore2" onchange="checkIfDone4()">
+            </td>
+            <td>
+                <input type="checkbox" id="FriChore2" onchange="checkIfDone5()">
+            </td>
+        </tr>
+        <tr>
+            <td class="choreName">Exercise</td>
+            <td>
+                <input type="checkbox" id="MonChore3" onchange="checkIfDone1()">
+            </td>
+            <td>
+                <input type="checkbox" id="TuesChore3" onchange="checkIfDone2()">
+            </td>
+            <td>
+                <input type="checkbox" id="WedChore3" onchange="checkIfDone3()">
+            </td>
+            <td>
+                <input type="checkbox" id="ThursChore3" onchange="checkIfDone4()">
+            </td>
+            <td>
+                <input type="checkbox" id="FriChore3" onchange="checkIfDone5()">
+            </td>
+        </tr>
+        <tr>
+            <td>Am I done?</td>
+            <td id="doneText1">
+                Not done
+            </td>
+            <td id="doneText2">
+                Not done
+            </td>
+            <td id="doneText3">
+                Not done
+            </td>
+            <td id="doneText4">
+                Not done
+            </td>
+            <td id="doneText5">
+                Not done
+            </td>
+        </tr>
+    </table>
+    <br>
+    <a href="mailto:karen.thayer@gmail.com">Email mom</a>
+
+</body>
+
+</html>
